@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, View, Text, Image, TouchableOpacity} from 'react-native';
+import { StyleSheet, View, Text, TouchableOpacity, StatusBar} from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 import * as Animatable from 'react-native-animatable';
 import MaterialIcon from 'react-native-vector-icons/MaterialIcons';
@@ -7,6 +7,9 @@ import MaterialIcon from 'react-native-vector-icons/MaterialIcons';
 const SplashScreen = props => {
     return (
             <View style={styles.splashScreen}>
+            <StatusBar barStyle = 'light-content'
+        backgroundColor = "#C2185B"
+         />
             <View style={styles.header}>
             <Animatable.Image
             animation = "bounceIn"
