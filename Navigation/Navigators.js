@@ -12,9 +12,9 @@ const RootStackScreen = () => {
     return (
         <NavigationContainer>
             <Stack.Navigator>
-                <Stack.Screen name="Splash Screen" component={SplashScreen} options={{ headerShown: false }} />
-                <Stack.Screen name="Login Screen" component={LoginScreen} options={{ headerShown: false }} />
-                <Stack.Screen name="SignUp Screen" component={SignUpScreen} options={{ headerShown: false }} />
+                <Stack.Screen name="SplashScreen" component={SplashScreen} options={{ headerShown: false }} />
+                <Stack.Screen name="LoginScreen" component={LoginScreen} options={{ headerShown: false }} />
+                <Stack.Screen name="SignUpScreen" component={SignUpScreen} options={{ headerShown: false }} />
             </Stack.Navigator>
         </NavigationContainer>
     );
