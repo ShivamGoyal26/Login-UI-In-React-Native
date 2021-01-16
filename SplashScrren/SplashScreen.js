@@ -9,7 +9,7 @@ const SplashScreen = props => {
         <LinearGradient colors={['#C2185B', '#ffffff']} style={styles.linearGradient}>
             <View style={styles.splashScreen}>
                 <Image
-                    source={{ uri: 'https://i.pinimg.com/originals/12/b0/7d/12b07d7d7dbde76a3a687552d50d397f.png'}}
+                    source={{ uri: 'https://banner.uclipart.com/20200111/ogl/shopping-sales-cafe-text-logo.png'}}
                     style={styles.image}
                 />
                 <Text style={styles.titleText}>
