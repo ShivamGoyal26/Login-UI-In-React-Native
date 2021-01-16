@@ -2,7 +2,7 @@ import React from 'react';
 import { StyleSheet, View, Text, Image, TouchableOpacity} from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 import * as Animatable from 'react-native-animatable';
-// import Icon from 'react-native-vector-icons/MaterialIcons';
+import MaterialIcon from 'react-native-vector-icons/MaterialIcons';
 
 const SplashScreen = props => {
     return (
@@ -31,7 +31,7 @@ const SplashScreen = props => {
                     style={styles.signIn}
                     >
                         <Text style={styles.textSign}>Get Started</Text>
-                        {/* <Icon name='md-menu' size={26} color={'white'} /> */}
+                        <MaterialIcon name='navigate-next' size={26} color = {'white'}/>
                     </LinearGradient>
                 </TouchableOpacity>
                 </View>
@@ -75,13 +75,15 @@ const styles = StyleSheet.create({
     },
     text: {
         color: 'grey',
-        marginTop:5
+        marginTop: 10,
     },
     signIn: {
         width: 150,
         height: 40,
-        justifyContent: 'center',
+        padding: 15,
+        justifyContent: 'space-around',
         alignItems: 'center',
+        alignContent: 'center',
         borderRadius: 50,
         flexDirection: 'row'
     },
