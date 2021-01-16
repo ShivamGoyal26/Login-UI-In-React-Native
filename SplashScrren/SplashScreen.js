@@ -1,22 +1,25 @@
 import React from 'react';
-import { StyleSheet, View, Text, Image, Dimensions, TouchableOpacity} from 'react-native';
+import { StyleSheet, View, Text, Image, TouchableOpacity} from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
+import * as Animatable from 'react-native-animatable';
 // import Icon from 'react-native-vector-icons/MaterialIcons';
-
-const height = Dimensions.get('screen');
-const height_logo = height * 0.28;
 
 const SplashScreen = props => {
     return (
             <View style={styles.splashScreen}>
             <View style={styles.header}>
-            <Image
+            <Animatable.Image
+            animation = "bounceIn"
+            duration= {1500}
                     source={{ uri: 'https://banner.uclipart.com/20200111/ogl/shopping-sales-cafe-text-logo.png'}}
                     style={styles.logo}
                     resizeMode = 'stretch'
                 />
             </View>
-            <View style={styles.footer}>
+            <Animatable.View 
+            style={styles.footer}
+            animation="fadeInUpBig"
+            >
                 <Text style={styles.title}>Cool things are waiting for you!</Text>
                 <Text style={styles.text}>Sign in With account</Text>
                 <View style={styles.button}>
@@ -34,7 +37,7 @@ const SplashScreen = props => {
                 </View>
                 
                 
-            </View>
+            </Animatable.View>
                
             </View>
     );
@@ -62,8 +65,8 @@ const styles = StyleSheet.create({
         paddingVertical: 50,
     },
     logo: {
-        height: 100,
-        width: 100,
+        height: 170,
+        width: 170,
     },
     title: {
         color: '#05375a',
