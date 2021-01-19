@@ -17,11 +17,13 @@ const SignUpScreen = props => {
     const [data, setData] = useState({
         email: '',
         password: '',
-        confirmPassword: '',    
+        confirmPassword: '',
         check_textInputChange: false,
         secureTextEntry: true,
         confirm_secureTextEntry: true,
     });
+
+    // TEXT HANDLER 
 
     const textInputChange = (val) => {
         console.log("EMAIL FUNCTION DOING")
@@ -41,12 +43,17 @@ const SignUpScreen = props => {
         }
     };
 
+    // PASSWORD HANDLER 
+
     const handlerPasswordChange = (val) => {
         setData({
             ...data,
             password: val,
         });
     };
+
+    // CONFIRM PASSWORD HANDLER 
+
     const handlerConfirmPasswordChange = (val) => {
         setData({
             ...data,
@@ -54,7 +61,8 @@ const SignUpScreen = props => {
         });
     };
 
-    
+
+    // PASSWORD ICON UPDATE 
 
     const updateSecureTextEntry = () => {
         setData({
@@ -63,24 +71,26 @@ const SignUpScreen = props => {
         })
     };
 
+    // CONFIRM PASSWORD ICON UPDATE 
+
     const updateConfirmSecureTextEntry = () => {
         setData({
             ...data,
-            check_textInputChange: !data.check_textInputChange,
+            confirm_secureTextEntry: !data.confirm_secureTextEntry,
         })
     };
 
     return (
         <View style={styles.container}>
-        <StatusBar barStyle = 'light-content'
-        backgroundColor = "#C2185B"
-         />
+            <StatusBar barStyle='light-content'
+                backgroundColor="#C2185B"
+            />
             <View style={styles.header}>
                 <Text style={styles.text_header}>Register Now!</Text>
             </View>
-            <Animatable.View 
-            animation = 'fadeInUpBig'
-            style={styles.footer}
+            <Animatable.View
+                animation='fadeInUpBig'
+                style={styles.footer}
             >
 
                 {/* EMAIL FEILD  */}
@@ -185,13 +195,13 @@ const SignUpScreen = props => {
                 {/* SIGN IN BUTTON */}
 
                 <View style={styles.button}>
-                <TouchableOpacity style={styles.signIn}>
-                    <LinearGradient
-                        colors={['#C2185B', '#C2185B']}
-                        style={styles.signIn}
-                    >
-                        <Text style={{ color: '#fff', fontSize: 18, fontWeight: 'bold' }}>Sign Up</Text>
-                    </LinearGradient>
+                    <TouchableOpacity style={styles.signIn}>
+                        <LinearGradient
+                            colors={['#C2185B', '#C2185B']}
+                            style={styles.signIn}
+                        >
+                            <Text style={{ color: '#fff', fontSize: 18, fontWeight: 'bold' }}>Sign Up</Text>
+                        </LinearGradient>
                     </TouchableOpacity>
 
                     {/* SIGN UP BUTTON */}
